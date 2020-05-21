@@ -6,7 +6,7 @@ import Icon1 from 'react-native-vector-icons/Fontisto';
 
 import * as Actions from '../../redux/actions';
 import CheckInOutStyles from './CheckInOutStyles';
-import { ORANGE } from '../../helper/Color';
+import Header from '../../component/Header';
 
 class CheckInOut extends Component {
 
@@ -22,7 +22,7 @@ class CheckInOut extends Component {
   render() {
     return (
       <CheckInOutStyles.WrapperViewVertical>
-        <CheckInOutStyles.SplashImage source={require('../../assets/appIcon.png')} />
+        <Header leftPress={() => this.props.navigation.openDrawer()} HeaderText={"Status"}/>
       </CheckInOutStyles.WrapperViewVertical>
     );
   }

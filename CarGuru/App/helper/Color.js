@@ -11,6 +11,7 @@ export const BLACK = {
 export const WHITE = {
   off: '#f2f2f2',
   dark: '#fff',
+  silver: 'rgba(192, 192, 192, 1)',
   paleGrey: 'rgba(244, 248, 255, 1)',
   borderLight: 'rgba(151, 151, 151, 0.1)',
   transParent: 'rgba(151, 151, 151, 0.8)',

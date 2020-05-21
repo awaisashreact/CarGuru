@@ -4,7 +4,6 @@ import { BLACK } from '../../helper/Color';
 const CheckInOutStyles = {
   WrapperViewVertical: styled.View`
     flex: 1;
-    justifyContent: center;
     backgroundColor: ${BLACK.dark};
   `,
   SplashImage: styled.Image`

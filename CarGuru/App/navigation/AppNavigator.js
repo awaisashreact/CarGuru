@@ -1,9 +1,10 @@
 import React from 'react';
-import { Animated, Easing, SafeAreaView, ScrollView, View } from 'react-native';
+import { Animated, Easing, SafeAreaView, ScrollView, View, Image } from 'react-native';
 import { createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createDrawerNavigator, DrawerItems} from 'react-navigation-drawer';
-import Icon1 from 'react-native-vector-icons/Fontisto';
+import Icon2 from 'react-native-vector-icons/AntDesign';
+import Icon3 from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import Splash from '../screen/Splash';
 import SignIn from '../screen/SignIn';
@@ -12,6 +13,7 @@ import OCR from '../screen/OCR';
 import Profile from '../screen/Profile';
 import ServiceOrder from '../screen/ServiceOrder';
 import CheckInOut from '../screen/CheckInOut';
+import JobDetail from '../screen/JobDetail';
 import { SCREEN } from '../helper/Constant';
 import { BLACK, WHITE, ORANGE } from '../helper/Color';
 
@@ -26,8 +28,8 @@ const noTransitionConfig = () => ({
 
 const CustomDrawerComponent = (props) => (
   <SafeAreaView>
-    <View style={{height: SCREEN.height / 4, backgroundColor: BLACK.dark}}>
-
+    <View style={{height: SCREEN.height / 4, justifyContent: 'center', alignItems: 'center'}}>
+      <Image source={require('../assets/appIcon.png')} style={{height: SCREEN.height / 6, width: SCREEN.width / 3, resizeMode: 'contain' }}/>
     </View>
     <ScrollView>
       <DrawerItems 
@@ -50,49 +52,48 @@ const AppDrawerNavigator = createDrawerNavigator({
   DashBoard: {
     screen: DashBoard,
     navigationOptions: {
-      tabBarLabel: 'DashBoard',
-      tabBarIcon: ({focused}) => (
-        <Icon1 size={30} color={BLACK.dark} name={'email'}/>
+      drawerLabel: 'DashBoard',
+      drawerIcon: ({focused}) => (
+        <Icon2 size={20} color={focused ? ORANGE.defult : BLACK.dark} name={'areachart'}/>
       ),
     },
   },
   ServiceOrder: {
     screen: ServiceOrder,
     navigationOptions: {
-      tabBarLabel: 'Service Order',
-      tabBarIcon: ({focused}) => (
-        <Icon1 size={30} color={BLACK.dark} name={'email'}/>
+      drawerLabel: 'Service Order',
+      drawerIcon: ({focused}) => (
+        <Icon2 size={20} color={focused ? ORANGE.defult : BLACK.dark} name={'customerservice'}/>
       ),
     },
   },
   OCR: {
     screen: OCR,
     navigationOptions: {
-      tabBarLabel: 'OCR',
-      tabBarIcon: ({focused}) => (
-        <Icon1 size={30} color={BLACK.dark} name={'email'}/>
+      drawerLabel: 'OCR',
+      drawerIcon: ({focused}) => (
+        <Icon3 size={20} color={focused ? ORANGE.defult : BLACK.dark} name={'barcode-scan'}/>
       ),
     },
   },
   Profile: {
     screen: Profile,
     navigationOptions: {
-      tabBarLabel: 'Profile',
-      tabBarIcon: ({focused}) => (
-        <Icon1 size={30} color={BLACK.dark} name={'email'}/>
+      drawerLabel: 'Profile',
+      drawerIcon: ({focused}) => (
+        <Icon3 size={20} color={focused ? ORANGE.defult : BLACK.dark} name={'account'}/>
       ),
     },
   },
   CheckInOut: {
     screen: CheckInOut,
     navigationOptions: {
-      tabBarLabel: 'CheckIn/CheckOut',
-      tabBarIcon: ({focused}) => (
-        <Icon1 size={30} color={BLACK.dark} name={'email'}/>
+      drawerLabel: 'CheckIn/CheckOut',
+      drawerIcon: ({focused}) => (
+        <Icon3 size={20} color={focused ? ORANGE.defult : BLACK.dark} name={'account-clock'}/>
       ),
     },
   },
-  CheckInOut: CheckInOut
 },
 {
     contentComponent: CustomDrawerComponent,
@@ -112,6 +113,10 @@ const LoginStack = createStackNavigator({
   },
   SignIn: {
     screen: SignIn,
+    navigationOptions: { header: null, gesturesEnabled: false },
+  },
+  JobDetail: {
+    screen: JobDetail,
     navigationOptions: { header: null, gesturesEnabled: false },
   },
   HomeMain: {

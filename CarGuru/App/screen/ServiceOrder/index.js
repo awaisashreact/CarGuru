@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 
 import * as Actions from '../../redux/actions';
 import ServiceOrderStyles from './ServiceOrderStyles';
+import Header from '../../component/Header';
 
 class ServiceOrder extends Component {
 
@@ -14,7 +15,7 @@ class ServiceOrder extends Component {
   render() {
     return (
       <ServiceOrderStyles.WrapperViewVertical>
-        <ServiceOrderStyles.SplashImage source={require('../../assets/appIcon.png')} />
+        <Header leftPress={() => this.props.navigation.openDrawer()} HeaderText={"Service Order"}/>
       </ServiceOrderStyles.WrapperViewVertical>
     );
   }

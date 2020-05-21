@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 
 import * as Actions from '../../redux/actions';
 import ProfileStyles from './ProfileStyles';
+import Header from '../../component/Header';
 
 class Profile extends Component {
 
@@ -14,7 +15,7 @@ class Profile extends Component {
   render() {
     return (
       <ProfileStyles.WrapperViewVertical>
-        <ProfileStyles.SplashImage source={require('../../assets/appIcon.png')} />
+        <Header leftPress={() => this.props.navigation.openDrawer()} HeaderText={"DashBoard"}/>
       </ProfileStyles.WrapperViewVertical>
     );
   }

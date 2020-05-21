@@ -1,11 +1,10 @@
 import styled from 'styled-components/native';
-import { BLACK } from '../../helper/Color';
+import { BLACK, WHITE } from '../../helper/Color';
 
 const OCRStyles = {
   WrapperViewVertical: styled.View`
     flex: 1;
-    justifyContent: center;
-    backgroundColor: ${BLACK.dark};
+    backgroundColor: ${WHITE.dark};
   `,
   SplashImage: styled.Image`
     height: 150px;

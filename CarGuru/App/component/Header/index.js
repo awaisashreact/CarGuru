@@ -1,6 +1,9 @@
 import React from 'react';
+import Icon from 'react-native-vector-icons/Feather';
+import Icon1 from 'react-native-vector-icons/Ionicons';
 
 import HeaderStyles from './HeaderStyles';
+import { WHITE } from '../../helper/Color';
 
 const Header = ({
   backColor,
@@ -14,24 +17,30 @@ const Header = ({
   leftPress,
   rightPress,
 }) => (
-  <HeaderStyles.WrapperView>
-    <HeaderStyles.Flex1View>
-      {leftType === 'text' ? 
-         <HeaderStyles.LeftText onPress = {leftPress}>
+    <HeaderStyles.WrapperView>
+      <HeaderStyles.Flex1View>
+        {leftType === 'text' ?
+          <HeaderStyles.LeftText onPress={leftPress}>
             {leftText}
-         </HeaderStyles.LeftText> :
-         <HeaderStyles.LeftImage />}
-    </HeaderStyles.Flex1View>
-    <HeaderStyles.Flex1View>
-      <HeaderStyles.TitleImage source={require('../../assets/name_app_white2.png')}/>
-    </HeaderStyles.Flex1View>
-    <HeaderStyles.Flex1View>
-    {rightType === 'text' ? 
-         <HeaderStyles.RightText onPress = {rightPress}>
+          </HeaderStyles.LeftText> :
+          <HeaderStyles.LeftImage onPress={leftPress}>
+            <Icon size={35} color={WHITE.dark} name={'menu'} />
+          </HeaderStyles.LeftImage>}
+      </HeaderStyles.Flex1View>
+      <HeaderStyles.Flex1View>
+        <HeaderStyles.TitleText>
+          {HeaderText}
+        </HeaderStyles.TitleText>
+      </HeaderStyles.Flex1View>
+      <HeaderStyles.Flex1View style={{ alignItems: 'flex-end', marginRight: 15 }}>
+        {rightType === 'text' ?
+          <HeaderStyles.RightText onPress={rightPress}>
             {rightText}
-         </HeaderStyles.RightText> :
-         <HeaderStyles.RightImage />}
-    </HeaderStyles.Flex1View>
-  </HeaderStyles.WrapperView>)
+          </HeaderStyles.RightText> :
+          <HeaderStyles.RightImage>
+            <Icon1 size={35} color={WHITE.dark} name={'ios-notifications'} />
+          </HeaderStyles.RightImage>}
+      </HeaderStyles.Flex1View>
+    </HeaderStyles.WrapperView>)
 
 export default Header;
