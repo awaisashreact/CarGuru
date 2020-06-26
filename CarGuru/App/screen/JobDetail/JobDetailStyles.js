@@ -17,10 +17,11 @@ const JobDetailStyles = {
     marginVertical: 20px;
   `,
   CellWrapper: styled.View`
-    height: ${SCREEN.height / 4}px;
+    minHeight: ${SCREEN.height / 8}px;
     width: ${SCREEN.width - 15}px;
     alignSelf: center;
     borderRadius: 10px;
+    padding: 10px;
     backgroundColor: ${WHITE.off};
     shadowColor: #000;
      shadowOffset: {

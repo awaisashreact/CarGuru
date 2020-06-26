@@ -37,7 +37,7 @@ const Header = ({
           <HeaderStyles.RightText onPress={rightPress}>
             {rightText}
           </HeaderStyles.RightText> :
-          <HeaderStyles.RightImage>
+          <HeaderStyles.RightImage onPress={rightPress}>
             <Icon1 size={35} color={WHITE.dark} name={'ios-notifications'} />
           </HeaderStyles.RightImage>}
       </HeaderStyles.Flex1View>

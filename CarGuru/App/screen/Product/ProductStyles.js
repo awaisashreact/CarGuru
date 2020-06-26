@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 import { BLACK, WHITE, GREEN } from '../../helper/Color';
 import { SCREEN } from '../../helper/Constant';
 
-const ServiceOrderStyles = {
+const ProductStyles = {
   WrapperViewVertical: styled.View`
     flex: 1;
     backgroundColor: ${WHITE.dark};
@@ -16,12 +16,16 @@ const ServiceOrderStyles = {
   JobList: styled.FlatList`
     marginVertical: 20px;
   `,
+  CellMainWrapper: styled.View`
+    flex: 1;
+    justifyContent: center;
+    alignItems: center;
+  `,
   CellWrapper: styled.TouchableOpacity`
     minHeight: ${SCREEN.height / 8}px;
-    width: ${SCREEN.width - 15}px;
-    alignSelf: center;
-    borderRadius: 10px;
-    backgroundColor: ${WHITE.off};
+    width: ${(SCREEN.width / 2) - 30}px;
+    backgroundColor: ${WHITE.dark};
+    padding: 10px;
     shadowColor: #000;
      shadowOffset: {
 	     width: 0,
@@ -31,25 +35,27 @@ const ServiceOrderStyles = {
     shadowRadius: 4px;
     elevation: 7;
     marginTop: 20px;
-    flexDirection: row;
+    marginHorizontal: 7px;
   `,
   CellLeftView: styled.View`
     flex: 0.3;
     justifyContent: center;
     alignItems: center;
+    padding: 10px;
   `,
   CellLeftInnerImage: styled.Image`
     height: 100px;
     width: 100px;
-    borderRadius: 10px;
   `,
   CellRightView: styled.View`
     flex: 0.7;
     justifyContent: center;
   `,
   CellRightTitle: styled.Text`
-    fontSize: 20px;
-    fontWeight: bold;
+    fontSize: 18px;
+    marginTop: 5px;
+    alignSelf: center;
+    color: ${GREEN.deafult};
   `,
   CellRightdetail: styled.Text`
     fontSize: 16px;
@@ -79,6 +85,24 @@ const ServiceOrderStyles = {
   fontWeight: 500;
   color: ${WHITE.dark};
   `,
+  TopDropDownView: styled.TouchableOpacity `
+    height: 44px;
+    width: ${SCREEN.width - 80}px;
+    alignSelf: center;
+    backgroundColor: ${WHITE.dark};
+    borderWidth: 1px;
+    borderColor: ${GREEN.deafult};
+    marginTop: 5px;
+    justifyContent: center;
+  `,
+  AbsoluteRightIcon: styled.View`
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    right: 10;
+    justifyContent: center;
+    alignItems: center;
+  `,
 };
 
-export default ServiceOrderStyles;
+export default ProductStyles;

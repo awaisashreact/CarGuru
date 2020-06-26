@@ -3,7 +3,7 @@ import styled from 'styled-components/native';
 import {SCREEN, isIphoneXorAbove} from '../../helper/Constant';
 import {WHITE, BLUE, APPCOLOR, BLACK, GREEN} from '../../helper/Color';
 
-const HeaderStyles = {
+const ChatHeaderStyle = {
   WrapperView: styled.View`
     width: 100%;
     height: ${isIphoneXorAbove ? 90 : 60}px;
@@ -16,6 +16,11 @@ const HeaderStyles = {
     backgroundColor: ${GREEN.deafult};
   `,
   Flex1View: styled.View`
+    flex: 1;
+    alignItems: center;
+    flexDirection: row;
+  `,
+  Flex2View: styled.View`
     flex: 1;
     justifyContent: center;
   `,
@@ -30,6 +35,11 @@ const HeaderStyles = {
     width: 35px;
     marginLeft: 15px;
   `,
+  LeftImageInner: styled.Image`
+    height: 35px;
+    width: 35px;
+    borderRadius: 18px;
+  `,
   RightText: styled.Text`
     alignSelf: flex-end;
     fontSize: 16px;
@@ -40,6 +50,9 @@ const HeaderStyles = {
   RightImage: styled.TouchableOpacity`
     height: 35px;
     width: 35px;
+    position: absolute;
+    right: 5px;
+    top: -10px
   `,
   TitleText: styled.Text`
     alignSelf: center;
@@ -49,4 +62,4 @@ const HeaderStyles = {
   `,
 };
 
-export default HeaderStyles;
+export default ChatHeaderStyle;

@@ -1,14 +1,14 @@
 import styled from 'styled-components/native';
-import { BLACK, WHITE, GREEN } from '../../helper/Color';
+import { BLACK, WHITE } from '../../helper/Color';
 import { SCREEN } from '../../helper/Constant';
 
-const ServiceOrderStyles = {
+const NotificationStyles = {
   WrapperViewVertical: styled.View`
     flex: 1;
     backgroundColor: ${WHITE.dark};
   `,
   SplashImage: styled.Image`
-    height: 150px;
+    height: 100px;
     width: 100px;
     alignSelf: center;
     resizeMode: contain;
@@ -17,7 +17,7 @@ const ServiceOrderStyles = {
     marginVertical: 20px;
   `,
   CellWrapper: styled.TouchableOpacity`
-    minHeight: ${SCREEN.height / 8}px;
+    height: ${SCREEN.height / 12}px;
     width: ${SCREEN.width - 15}px;
     alignSelf: center;
     borderRadius: 10px;
@@ -34,51 +34,36 @@ const ServiceOrderStyles = {
     flexDirection: row;
   `,
   CellLeftView: styled.View`
-    flex: 0.3;
+    flex: 0.2;
     justifyContent: center;
     alignItems: center;
   `,
   CellLeftInnerImage: styled.Image`
     height: 100px;
     width: 100px;
+    resizeMode: contain;
     borderRadius: 10px;
   `,
   CellRightView: styled.View`
-    flex: 0.7;
+    flex: 1;
     justifyContent: center;
   `,
   CellRightTitle: styled.Text`
-    fontSize: 20px;
+    fontSize: 16px;
     fontWeight: bold;
   `,
   CellRightdetail: styled.Text`
-    fontSize: 16px;
+    fontSize: 18px;
     color ${BLACK.darkLight};
   `,
-  ButtonWrapperView: styled.View`
-    height: 44px;
-    width: ${SCREEN.width - 30}px;
-    alignSelf: center;
-    flexDirection: row;
-    marginTop: 40px;
+  CellMostRightView: styled.View`
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 5px;
+    top: 25px;
   `,
-  Flex1View: styled.View`
-    justifyContent: center;
-    alignItems: center;
-    flex: 1;
-  `,
-  InnerButton: styled.TouchableOpacity`
-    height: 44px;
-    width: ${(SCREEN.width / 2) - 40};
-    backgroundColor: ${GREEN.deafult};
-    justifyContent: center;
-    alignItems: center;
-  `,
-  InnerButtonText: styled.Text`
-  fontSize: 18px;
-  fontWeight: 500;
-  color: ${WHITE.dark};
-  `,
+
 };
 
-export default ServiceOrderStyles;
+export default NotificationStyles;

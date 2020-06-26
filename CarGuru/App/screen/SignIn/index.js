@@ -20,9 +20,6 @@ class SignIn extends Component {
   }
 
   componentDidMount() {
-    setTimeout(() => {
-      this.props.navigation.navigate('SignIn');
-    }, 3000);
   }
 
   render() {
@@ -65,7 +62,7 @@ class SignIn extends Component {
             </SignInStyles.ForgotText>
           </SignInStyles.ForgotView>
         </SignInStyles.WrapperViewVertical2>
-        <SignInStyles.RegisterButton>
+        <SignInStyles.RegisterButton onPress={() => this.props.navigation.navigate('SignUp')}>
           <SignInStyles.RememberMetext>
             Register
           </SignInStyles.RememberMetext>

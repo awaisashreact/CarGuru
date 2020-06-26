@@ -1,10 +1,11 @@
 import styled from 'styled-components/native';
-import { BLACK } from '../../helper/Color';
+import { BLACK, WHITE, GREEN } from '../../helper/Color';
+import { SCREEN } from '../../helper/Constant';
 
 const ProfileStyles = {
   WrapperViewVertical: styled.View`
     flex: 1;
-    backgroundColor: ${BLACK.dark};
+    backgroundColor: ${WHITE.dark};
   `,
   SplashImage: styled.Image`
     height: 150px;
@@ -12,6 +13,56 @@ const ProfileStyles = {
     alignSelf: center;
     resizeMode: contain;
   `,
+  ImageWrapperView: styled.TouchableOpacity`
+    height: 80px;
+    width: 80px;
+    borderRadius: 40px;
+    alignSelf: center;
+    marginTop: 40px;
+    justifyContent: center;
+    backgroundColor: ${GREEN.deafult};
+    borderColor: ${WHITE.off};
+    borderWidth: 0.5px;
+  `,
+  InnerImage: styled.Image`
+    height: 80px;
+    width: 80px;
+    alignSelf: center;
+    borderRadius: 40px;
+  `,
+  DetailWrapper: styled.View`
+    height: 50px;
+    width: ${SCREEN.width - 30}px;
+    alignSelf: center;
+    borderRadius: 15px;
+    backgroundColor: ${GREEN.deafult};
+    flexDirection: row;
+    marginTop: 10px;
+  `,
+  TitleTextView: styled.View`
+    flex: 0.3;
+    justifyContent: center;
+    borderRightWidth: 0.5px;
+    borderColor: ${WHITE.dark};
+  `,
+  TitleText: styled.Text`
+    fontSize: 18px;
+    alignSelf: center;
+    color: ${WHITE.dark};
+  `,
+  DescriptionView: styled.View`
+  flex: 0.7;
+  justifyContent: center;
+  paddingLeft: 10px;
+`,
+DescriptionText: styled.Text`
+  fontSize: 15px;
+  color: ${WHITE.dark};
+`,
+ServiceFeeDetail: styled.TextInput`
+  height: 50px;
+  color: ${WHITE.dark};
+`,
 };
 
 export default ProfileStyles;

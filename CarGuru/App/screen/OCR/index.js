@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Camera from 'react-native-camera';
 import { Text, Alert } from 'react-native';
 
 import Header from '../../component/Header';
@@ -24,20 +23,11 @@ class OCR extends Component {
   render() {
     return (
       <OCRStyles.WrapperViewVertical>
-        <Header leftPress={() => this.props.navigation.openDrawer()} HeaderText={"OCRr"} />
-        <Camera
-          style={{
-            flex: 1,
-            justifyContent: 'flex-end',
-            alignItems: 'center'
-          }}
-          onBarCodeRead={this.onBarCodeRead}
-          ref={cam => this.camera = cam}
-        >
+        <Header leftPress={() => this.props.navigation.openDrawer()} HeaderText={"OCRr"} rightPress={()=> this.props.navigation.navigate('Notification')} />
+        
           <Text style={{
             backgroundColor: 'white'
           }}>BARCODE SCANNER</Text>
-        </Camera>
       </OCRStyles.WrapperViewVertical>
     );
   }

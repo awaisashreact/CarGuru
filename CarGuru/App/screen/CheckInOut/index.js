@@ -7,22 +7,33 @@ import Icon1 from 'react-native-vector-icons/Fontisto';
 import * as Actions from '../../redux/actions';
 import CheckInOutStyles from './CheckInOutStyles';
 import Header from '../../component/Header';
+import { GREEN, RED} from '../../helper/Color';
 
 class CheckInOut extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      checIn: true,
+    }
+  }
 
   componentDidMount() {
   }
 
-  // static navigationOption = {
-  //   drawerIcon = ({tintColor}) = (
-  //     <Icon1 size={30} color={WHITE.dark} name={'locked'} style={{fontSize: 22, color=ORANGE.defult}}/>
-  //   )
-  // }
-
   render() {
     return (
       <CheckInOutStyles.WrapperViewVertical>
-        <Header leftPress={() => this.props.navigation.openDrawer()} HeaderText={"Status"}/>
+        <Header leftPress={() => this.props.navigation.openDrawer()} HeaderText={"Status"} rightPress={()=> this.props.navigation.navigate('Notification')}/>
+        {this.state.checIn && <CheckInOutStyles.CheckInTime style={{marginTop: 10}}>
+          You are checked in from 4 hour.
+        </CheckInOutStyles.CheckInTime>}
+        <CheckInOutStyles.CheckInOutButton
+          onPress={() => this.setState({checIn : !this.state.checIn})}
+          style={{backgroundColor: this.state.checIn ? GREEN.deafult : RED.deafult }}>
+          <CheckInOutStyles.CheckInButtonText>
+            {this.state.checIn ? 'Check Out' : 'Check In'}
+          </CheckInOutStyles.CheckInButtonText>
+        </CheckInOutStyles.CheckInOutButton>
       </CheckInOutStyles.WrapperViewVertical>
     );
   }

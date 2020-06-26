@@ -1,8 +1,8 @@
 import styled from 'styled-components/native';
-import { BLACK, WHITE, GREEN } from '../../helper/Color';
+import { BLACK, WHITE } from '../../helper/Color';
 import { SCREEN } from '../../helper/Constant';
 
-const ServiceOrderStyles = {
+const ReviewStyles = {
   WrapperViewVertical: styled.View`
     flex: 1;
     backgroundColor: ${WHITE.dark};
@@ -17,11 +17,11 @@ const ServiceOrderStyles = {
     marginVertical: 20px;
   `,
   CellWrapper: styled.TouchableOpacity`
-    minHeight: ${SCREEN.height / 8}px;
+    height: ${SCREEN.height / 9}px;
     width: ${SCREEN.width - 15}px;
     alignSelf: center;
     borderRadius: 10px;
-    backgroundColor: ${WHITE.off};
+    backgroundColor: ${WHITE.dark};
     shadowColor: #000;
      shadowOffset: {
 	     width: 0,
@@ -34,51 +34,33 @@ const ServiceOrderStyles = {
     flexDirection: row;
   `,
   CellLeftView: styled.View`
-    flex: 0.3;
+    flex: 0.25;
     justifyContent: center;
     alignItems: center;
   `,
   CellLeftInnerImage: styled.Image`
-    height: 100px;
-    width: 100px;
+    height: 40px;
+    width: 40px;
     borderRadius: 10px;
   `,
   CellRightView: styled.View`
     flex: 0.7;
     justifyContent: center;
+    padding: 10px
   `,
   CellRightTitle: styled.Text`
     fontSize: 20px;
     fontWeight: bold;
   `,
+  CellRightWrapper: styled.View`
+   flexDirection: row;
+   alignItems: center;
+  `,
   CellRightdetail: styled.Text`
     fontSize: 16px;
     color ${BLACK.darkLight};
   `,
-  ButtonWrapperView: styled.View`
-    height: 44px;
-    width: ${SCREEN.width - 30}px;
-    alignSelf: center;
-    flexDirection: row;
-    marginTop: 40px;
-  `,
-  Flex1View: styled.View`
-    justifyContent: center;
-    alignItems: center;
-    flex: 1;
-  `,
-  InnerButton: styled.TouchableOpacity`
-    height: 44px;
-    width: ${(SCREEN.width / 2) - 40};
-    backgroundColor: ${GREEN.deafult};
-    justifyContent: center;
-    alignItems: center;
-  `,
-  InnerButtonText: styled.Text`
-  fontSize: 18px;
-  fontWeight: 500;
-  color: ${WHITE.dark};
-  `,
+
 };
 
-export default ServiceOrderStyles;
+export default ReviewStyles;

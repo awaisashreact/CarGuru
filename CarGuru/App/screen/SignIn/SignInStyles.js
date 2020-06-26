@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 
-import { BLACK, WHITE, ORANGE } from '../../helper/Color';
+import { BLACK, WHITE, ORANGE, GREEN } from '../../helper/Color';
 import {SCREEN} from '../../helper/Constant';
 
 const SignInStyles = {
@@ -30,7 +30,7 @@ const SignInStyles = {
   TextInputImageWrapper: styled.View`
     height: 54px;
     width: 54px;
-    backgroundColor: ${BLACK.dark};
+    backgroundColor: ${GREEN.deafult};
     justifyContent: center;
     alignItems: center;
     borderBottomLeftRadius: 10px;
@@ -67,7 +67,7 @@ const SignInStyles = {
     height: 20px;
     width: 20px;
     borderWidth: 1px;
-    backgroundColor: ${BLACK.dark};
+    backgroundColor: ${GREEN.deafult};
     justifyContent: center;
     alignItems: center;
     marginLeft: 5px;
@@ -86,7 +86,7 @@ const SignInStyles = {
     width: ${SCREEN.width / 3.5}px;
     justifyContent: center;
     alignItems: center;
-    backgroundColor: ${ORANGE.defult};
+    backgroundColor: ${GREEN.deafult};
     borderRadius: 10px;
   `,
   ForgotView: styled.View`
@@ -107,7 +107,7 @@ const SignInStyles = {
     alignSelf: center;
     justifyContent: center;
     alignItems: center;
-    backgroundColor: ${BLACK.light};
+    backgroundColor: ${GREEN.light};
     marginBottom: 15px;
     borderRadius: 10px;
   `,

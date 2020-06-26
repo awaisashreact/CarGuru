@@ -1,8 +1,8 @@
 import styled from 'styled-components/native';
-import { BLACK, WHITE, GREEN } from '../../helper/Color';
+import { BLACK, WHITE } from '../../helper/Color';
 import { SCREEN } from '../../helper/Constant';
 
-const ServiceOrderStyles = {
+const EarnJobsDetailStyles = {
   WrapperViewVertical: styled.View`
     flex: 1;
     backgroundColor: ${WHITE.dark};
@@ -16,8 +16,9 @@ const ServiceOrderStyles = {
   JobList: styled.FlatList`
     marginVertical: 20px;
   `,
-  CellWrapper: styled.TouchableOpacity`
-    minHeight: ${SCREEN.height / 8}px;
+  CellWrapper: styled.View`
+    minHeight: ${SCREEN.height / 9}px;
+    padding: 10px;
     width: ${SCREEN.width - 15}px;
     alignSelf: center;
     borderRadius: 10px;
@@ -41,6 +42,7 @@ const ServiceOrderStyles = {
   CellLeftInnerImage: styled.Image`
     height: 100px;
     width: 100px;
+    resizeMode: contain;
     borderRadius: 10px;
   `,
   CellRightView: styled.View`
@@ -55,30 +57,6 @@ const ServiceOrderStyles = {
     fontSize: 16px;
     color ${BLACK.darkLight};
   `,
-  ButtonWrapperView: styled.View`
-    height: 44px;
-    width: ${SCREEN.width - 30}px;
-    alignSelf: center;
-    flexDirection: row;
-    marginTop: 40px;
-  `,
-  Flex1View: styled.View`
-    justifyContent: center;
-    alignItems: center;
-    flex: 1;
-  `,
-  InnerButton: styled.TouchableOpacity`
-    height: 44px;
-    width: ${(SCREEN.width / 2) - 40};
-    backgroundColor: ${GREEN.deafult};
-    justifyContent: center;
-    alignItems: center;
-  `,
-  InnerButtonText: styled.Text`
-  fontSize: 18px;
-  fontWeight: 500;
-  color: ${WHITE.dark};
-  `,
 };
 
-export default ServiceOrderStyles;
+export default EarnJobsDetailStyles;

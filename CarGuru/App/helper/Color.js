@@ -41,4 +41,14 @@ export const LIGHTBLUE = {
   default: '#77BFFF',
 };
 
+export const GREEN = {
+  deafult: 'rgba(10,140,85, 1)',
+  light: 'rgba(10,140,85, 0.4)',
+};
+
+export const RED = {
+  deafult: 'rgba(255,0,0, 1)',
+  light: 'rgba(255,0,0, 0.4)',
+};
+
 export const CLEAR = 'transparent';

@@ -8,7 +8,7 @@ import { Calendar } from 'react-native-calendars';
 import * as Actions from '../../redux/actions';
 import DashBoardStyles from './DashBoardStyles';
 import Header from '../../component/Header';
-import { BLACK } from '../../helper/Color';
+import { BLACK, GREEN, WHITE } from '../../helper/Color';
 
 class DashBoard extends Component {
 
@@ -18,37 +18,43 @@ class DashBoard extends Component {
   render() {
     return (
       <DashBoardStyles.WrapperViewVertical>
-        <Header leftPress={() => this.props.navigation.openDrawer()} HeaderText={"DashBoard"} />
+        <Header leftPress={() => this.props.navigation.openDrawer()} HeaderText={"DashBoard"} rightPress={()=> this.props.navigation.navigate('Notification')} />
         <DashBoardStyles.TopView>
           <DashBoardStyles.TopFlex1View>
-            <DashBoardStyles.TopInnerView style={{
+            <DashBoardStyles.TopInnerView
+             onPress={() => this.props.navigation.navigate("EarnJobDetail", {from: 'Earn'})}
+              style={{
               shadowColor: BLACK.dark,
               shadowOffset: { width: 0, height: 0 },
               shadowOpacity: 0.08,
               shadowRadius: 1,
               elevation: 4,
+              backgroundColor: GREEN.deafult
             }}>
-              <DashBoardStyles.TopInnerHeaderText>
+              <DashBoardStyles.TopInnerHeaderText style={{color: WHITE.dark}}>
                 Total earning
               </DashBoardStyles.TopInnerHeaderText>
-              <DashBoardStyles.TopInnerCountText>
-                2200$
+              <DashBoardStyles.TopInnerCountText style={{color: WHITE.dark}}>
+                2200 AED
               </DashBoardStyles.TopInnerCountText>
             </DashBoardStyles.TopInnerView>
           </DashBoardStyles.TopFlex1View>
           <DashBoardStyles.TopFlex1View>
-            <DashBoardStyles.TopInnerView style={{
+            <DashBoardStyles.TopInnerView
+              onPress={() => this.props.navigation.navigate("EarnJobDetail", {from: 'Earn'})}
+              style={{
               shadowColor: BLACK.dark,
               shadowOffset: { width: 0, height: 0 },
               shadowOpacity: 0.08,
               shadowRadius: 1,
               elevation: 4,
+              backgroundColor: GREEN.deafult
             }}>
-              <DashBoardStyles.TopInnerHeaderText>
+              <DashBoardStyles.TopInnerHeaderText style={{color: WHITE.dark}} onPress={() => this.props.navigation.navigate("EarnJobDetail", {from: 'Jobs'})}>
                 Total jobs
               </DashBoardStyles.TopInnerHeaderText>
-              <DashBoardStyles.TopInnerCountText>
-                150$
+              <DashBoardStyles.TopInnerCountText style={{color: WHITE.dark}}>
+                15
               </DashBoardStyles.TopInnerCountText>
             </DashBoardStyles.TopInnerView>
           </DashBoardStyles.TopFlex1View>
@@ -64,12 +70,12 @@ class DashBoard extends Component {
             }
           }}
           markedDates={{
-            '2020-05-16': { selected: true, marked: false, selectedColor: 'red' },
-            '2020-05-19': { selected: true, marked: false, selectedColor: 'red' },
-            '2020-05-18': { selected: true, marked: false, selectedColor: 'red' },
-            '2012-05-16': { selected: true, marked: false, selectedColor: 'red' },
+            '2020-05-16': { selected: true, marked: false, selectedColor: GREEN.deafult },
+            '2020-05-19': { selected: true, marked: false, selectedColor: GREEN.deafult },
+            '2020-05-18': { selected: true, marked: false, selectedColor: GREEN.deafult },
+            '2012-05-16': { selected: true, marked: false, selectedColor: GREEN.deafult },
             '2012-05-17': { marked: true },
-            '2012-05-18': { marked: true, dotColor: 'red', activeOpacity: 0 },
+            '2012-05-18': { marked: true, dotColor: GREEN.deafult, activeOpacity: 0 },
             '2012-05-19': { disabled: true, disableTouchEvent: true }
           }}
         />
