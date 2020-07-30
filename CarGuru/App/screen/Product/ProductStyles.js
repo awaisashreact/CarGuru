@@ -52,14 +52,15 @@ const ProductStyles = {
     justifyContent: center;
   `,
   CellRightTitle: styled.Text`
-    fontSize: 18px;
+    fontSize: 12px;
     marginTop: 5px;
     alignSelf: center;
-    color: ${GREEN.deafult};
+    fontFamily: Helvetica;
   `,
   CellRightdetail: styled.Text`
-    fontSize: 16px;
+    fontSize: 12px;
     color ${BLACK.darkLight};
+    fontFamily: Helvetica;
   `,
   ButtonWrapperView: styled.View`
     height: 44px;
@@ -74,26 +75,36 @@ const ProductStyles = {
     flex: 1;
   `,
   InnerButton: styled.TouchableOpacity`
-    height: 44px;
-    width: ${(SCREEN.width / 2) - 40};
+    height: 50px;
+    minWidth: ${(SCREEN.width / 2) - 40};
+    paddingHorizontal: 5px;
     backgroundColor: ${GREEN.deafult};
     justifyContent: center;
     alignItems: center;
+
   `,
   InnerButtonText: styled.Text`
-  fontSize: 18px;
-  fontWeight: 500;
+  fontSize: 15px;
   color: ${WHITE.dark};
+  fontFamily: Helvetica;
   `,
   TopDropDownView: styled.TouchableOpacity `
     height: 44px;
     width: ${SCREEN.width - 80}px;
     alignSelf: center;
     backgroundColor: ${WHITE.dark};
-    borderWidth: 1px;
-    borderColor: ${GREEN.deafult};
+    borderWidth: 0.3px;
+    borderColor: ${BLACK.light};
     marginTop: 5px;
     justifyContent: center;
+    shadowColor: #000;
+     shadowOffset: {
+	     width: 0,
+	     height: 1,
+     };
+    shadowOpacity: 0.29px;
+    shadowRadius: 2px;
+    elevation: 7;
   `,
   AbsoluteRightIcon: styled.View`
     height: 20px;

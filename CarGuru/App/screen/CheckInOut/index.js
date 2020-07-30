@@ -7,7 +7,7 @@ import Icon1 from 'react-native-vector-icons/Fontisto';
 import * as Actions from '../../redux/actions';
 import CheckInOutStyles from './CheckInOutStyles';
 import Header from '../../component/Header';
-import { GREEN, RED} from '../../helper/Color';
+import { GREEN, RED, WHITE} from '../../helper/Color';
 
 class CheckInOut extends Component {
   constructor(props){
@@ -29,7 +29,7 @@ class CheckInOut extends Component {
         </CheckInOutStyles.CheckInTime>}
         <CheckInOutStyles.CheckInOutButton
           onPress={() => this.setState({checIn : !this.state.checIn})}
-          style={{backgroundColor: this.state.checIn ? GREEN.deafult : RED.deafult }}>
+          style={{backgroundColor: this.state.checIn ? WHITE.dark : RED.deafult }}>
           <CheckInOutStyles.CheckInButtonText>
             {this.state.checIn ? 'Check Out' : 'Check In'}
           </CheckInOutStyles.CheckInButtonText>

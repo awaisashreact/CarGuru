@@ -112,56 +112,56 @@ class JobDetail extends Component {
         {this.state.detailView && <View style={{ position: 'absolute', height: SCREEN.height, width: SCREEN.width, backgroundColor: WHITE.dark }}>
           <View style={{ height: isIphoneXorAbove ? 90 : 60, width: SCREEN.width, flexDirection: "row", backgroundColor: GREEN.deafult }}>
             <View style={{ flex: 1, backgroundColor: GREEN.deafult, borderRightColor: WHITE.dark, borderRightWidth: 1, justifyContent: 'center', alignItems: 'center' }}>
-              <Text style={{ color: this.state.serviceSelected ? WHITE.dark : WHITE.transParent, fontSize: 18 }} onPress={() => this.setState({ serviceSelected: true })}>
+              <Text style={{ color: this.state.serviceSelected ? WHITE.dark : WHITE.transParent, fontSize: 15, fontFamily: 'Helvetica' }} onPress={() => this.setState({ serviceSelected: true })}>
                 Service
                   </Text>
             </View>
             <View style={{ flex: 1, backgroundColor: GREEN.deafult, justifyContent: 'center', alignItems: 'center' }}>
-              <Text style={{ color: !this.state.serviceSelected ? WHITE.dark : WHITE.transParent, fontSize: 18 }} onPress={() => this.setState({ serviceSelected: false })}>
+              <Text style={{ color: !this.state.serviceSelected ? WHITE.dark : WHITE.transParent, fontSize: 15, fontFamily: 'Helvetica'  }} onPress={() => this.setState({ serviceSelected: false })}>
                 Customer
                   </Text>
             </View>
           </View>
           {this.state.serviceSelected ?
             <View style={{ marginTop: 10, marginHorizontal: 10 }}>
-              <Text style={{ fontSize: 22 }}>
+              <Text style={{ fontSize: 15, fontFamily: 'Helvetica'  }}>
                 Service Type
             </Text>
-              <Text style={{ marginTop: 10, borderBottomWidth: 1, fontSize: 18, paddingLeft: 5 }}>
+              <Text style={{ marginTop: 10, borderBottomWidth: 1, fontSize: 12, paddingLeft: 5, fontFamily: 'Helvetica'  }}>
                 1    Battery Charge{'\n'}
               </Text>
-              <Text style={{ marginTop: 1, borderBottomWidth: 1, fontSize: 18, paddingLeft: 5 }}>
+              <Text style={{ marginTop: 1, borderBottomWidth: 1, fontSize: 12, paddingLeft: 5, fontFamily: 'Helvetica'  }}>
                 2    Tyre replacement{'\n'}
               </Text>
               <View style={{ marginTop: 10, height: 44, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-                <Text style={{ fontSize: 22, }}>
+                <Text style={{ fontSize: 15, fontFamily: 'Helvetica'  }}>
                   Product Cost
               </Text>
-                <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+                <Text style={{ fontSize: 12, position: 'absolute', right: 5, fontFamily: 'Helvetica'  }}>
                   $200
               </Text>
               </View>
               <View style={{ marginTop: 10, height: 44, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-                <Text style={{ fontSize: 22, }}>
+                <Text style={{ fontSize: 15, fontFamily: 'Helvetica'  }}>
                   Margin
               </Text>
-                <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+                <Text style={{ fontSize: 12, position: 'absolute', right: 5, fontFamily: 'Helvetica'  }}>
                   10%
               </Text>
               </View>
               <View style={{ marginTop: 10, height: 44, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-                <Text style={{ fontSize: 22, }}>
+                <Text style={{ fontSize: 15, fontFamily: 'Helvetica'  }}>
                   Service Charges
               </Text>
-                <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+                <Text style={{ fontSize: 12, fontFamily: 'Helvetica' , position: 'absolute', right: 5 }}>
                   $50
               </Text>
               </View>
               <View style={{ marginTop: 20, height: 44, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-                <Text style={{ fontSize: 24, fontStyle: 'italic' }}>
+                <Text style={{ fontSize: 15, fontStyle: 'italic', fontFamily: 'Helvetica'  }}>
                   TOTAL PRICE
               </Text>
-                <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+                <Text style={{ fontSize: 14, fontFamily: 'Helvetica' , position: 'absolute', right: 5 }}>
                   $230.00
               </Text>
               </View>
@@ -199,49 +199,49 @@ class JobDetail extends Component {
                 <TouchableOpacity
                   onPress={() => this.setState({ openCustomerDetail: !this.state.openCustomerDetail })}
                   activeOpacity={1}
-                  style={{ marginTop: 10, height: 54, width: SCREEN.width - 20, alignSelf: "center", backgroundColor: WHITE.silver, justifyContent: 'center' }}>
-                  <Text style={{ marginLeft: 10, fontSize: 18, color: GREEN.deafult }}>
+                  style={{ marginTop: 10, height: 54, width: SCREEN.width - 20, alignSelf: "center", backgroundColor: WHITE.dark, justifyContent: 'center', shadowColor: '#000',shadowOffset: {width: 0,height: 1,},shadowOpacity: 0.3,shadowRadius: 4,elevation: 7}}>
+                  <Text style={{ marginLeft: 10, fontSize: 15, fontFamily: 'Helvetica'  }}>
                     Customer Detail
                  </Text>
                   <View style={{ position: 'absolute', right: 10, height: 20, width: 20, justifyContent: "center" }}>
-                    {this.state.openCustomerDetail ? <Icon name={"caretdown"} color={WHITE.dark} size={20} /> :
-                      <Icon name={"caretright"} color={WHITE.dark} size={20} />}
+                    {this.state.openCustomerDetail ? <Icon name={"caretdown"} color={BLACK.dark} size={20} /> :
+                      <Icon name={"caretright"} color={BLACK.dark} size={20} />}
                   </View>
                 </TouchableOpacity>
                 {this.state.openCustomerDetail &&
                   <View>
 
                     <View style={{ marginTop: 10, height: 44, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-                      <Text style={{ fontSize: 22, }}>
+                      <Text style={{ fontSize: 15, fontFamily: 'Helvetica'  }}>
                         First Name
               </Text>
-                      <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+                      <Text style={{ fontSize: 12, position: 'absolute', right: 5, fontFamily: 'Helvetica'  }}>
                         John
               </Text>
                     </View>
 
                     <View style={{ marginTop: 10, height: 44, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-                      <Text style={{ fontSize: 22, }}>
+                      <Text style={{ fontSize: 15, fontFamily: 'Helvetica'  }}>
                         Last Name
               </Text>
-                      <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+                      <Text style={{ fontSize: 12, position: 'absolute', right: 5, fontFamily: 'Helvetica'  }}>
                         Vick
               </Text>
                     </View>
 
                     <View style={{ marginTop: 10, height: 44, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-                      <Text style={{ fontSize: 22, }}>
+                      <Text style={{ fontSize: 15, fontFamily: 'Helvetica'  }}>
                         Contact No.
               </Text>
-                      <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+                      <Text style={{ fontSize: 12, position: 'absolute', right: 5, fontFamily: 'Helvetica'  }}>
                         +9325641431
               </Text>
                     </View>
                     <View style={{ marginTop: 10, height: 44, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-                      <Text style={{ fontSize: 22, }}>
+                      <Text style={{ fontSize: 15, fontFamily: 'Helvetica'  }}>
                         Mulkia No.
               </Text>
-                      <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+                      <Text style={{ fontSize: 12, position: 'absolute', right: 5, fontFamily: 'Helvetica'  }}>
                         256-414-313
               </Text>
                     </View>
@@ -250,57 +250,57 @@ class JobDetail extends Component {
                 <TouchableOpacity
                   onPress={() => this.setState({ openVehicalDetail: !this.state.openVehicalDetail })}
                   activeOpacity={1}
-                  style={{ marginTop: 10, height: 54, width: SCREEN.width - 20, alignSelf: "center", backgroundColor: WHITE.silver, justifyContent: 'center' }}>
-                  <Text style={{ marginLeft: 10, fontSize: 18, color: GREEN.deafult }}>
+                  style={{ marginTop: 10, height: 54, width: SCREEN.width - 20, alignSelf: "center", backgroundColor: WHITE.dark, justifyContent: 'center', shadowColor: '#000',shadowOffset: {width: 0,height: 1,},shadowOpacity: 0.3,shadowRadius: 4,elevation: 7 }}>
+                  <Text style={{ marginLeft: 10, fontSize: 15, fontFamily: 'Helvetica'  }}>
                     Vehicle Detail
                  </Text>
                   <View style={{ position: 'absolute', right: 10, height: 20, width: 20, justifyContent: "center" }}>
-                    {this.state.openCustomerDetail ? <Icon name={"caretdown"} color={WHITE.dark} size={20} /> :
-                      <Icon name={"caretright"} color={WHITE.dark} size={20} />}
+                    {this.state.openVehicalDetail ? <Icon name={"caretdown"} color={BLACK.dark} size={20} /> :
+                      <Icon name={"caretright"} color={BLACK.dark} size={20} />}
                   </View>
                 </TouchableOpacity>
                 {this.state.openVehicalDetail &&
                   <View>
 
                     <View style={{ marginTop: 10, height: 44, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-                      <Text style={{ fontSize: 22, }}>
+                      <Text style={{ fontSize: 15, fontFamily: 'Helvetica'  }}>
                         Make
                      </Text>
-                      <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+                      <Text style={{ fontSize: 12, position: 'absolute', right: 5, fontFamily: 'Helvetica'  }}>
                         Toyota
                       </Text>
                     </View>
 
                     <View style={{ marginTop: 10, height: 44, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-                      <Text style={{ fontSize: 22, }}>
+                      <Text style={{ fontSize: 15, fontFamily: 'Helvetica'  }}>
                         Model
                    </Text>
-                      <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+                      <Text style={{ fontSize: 12, position: 'absolute', right: 5, fontFamily: 'Helvetica'  }}>
                         Corola
                       </Text>
                     </View>
                     <View style={{ marginTop: 10, height: 44, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-                      <Text style={{ fontSize: 22, }}>
+                      <Text style={{ fontSize: 15, fontFamily: 'Helvetica'  }}>
                         Year
                    </Text>
-                      <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+                      <Text style={{ fontSize: 12, position: 'absolute', right: 5, fontFamily: 'Helvetica'  }}>
                         2017
                       </Text>
                     </View>
 
                     <View style={{ marginTop: 10, height: 44, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-                      <Text style={{ fontSize: 22, }}>
+                      <Text style={{ fontSize: 15, fontFamily: 'Helvetica'  }}>
                         Vehicle No.
                      </Text>
-                      <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+                      <Text style={{ fontSize: 12, position: 'absolute', right: 5, fontFamily: 'Helvetica'  }}>
                         6783
                       </Text>
                     </View>
                     <View style={{ marginTop: 10, height: 44, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-                      <Text style={{ fontSize: 22, }}>
+                      <Text style={{ fontSize: 15, fontFamily: 'Helvetica'  }}>
                         VIN NO.
                      </Text>
-                      <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+                      <Text style={{ fontSize: 12, position: 'absolute', right: 5, fontFamily: 'Helvetica'  }}>
                         678342-534677-2
                       </Text>
                     </View>
@@ -308,32 +308,32 @@ class JobDetail extends Component {
                 <TouchableOpacity
                   onPress={() => this.setState({ openHistory: !this.state.openHistory })}
                   activeOpacity={1}
-                  style={{ marginTop: 10, height: 54, width: SCREEN.width - 20, alignSelf: "center", backgroundColor: WHITE.silver, justifyContent: 'center' }}>
-                  <Text style={{ marginLeft: 10, fontSize: 18, color: GREEN.deafult }}>
+                  style={{ marginTop: 10, height: 54, width: SCREEN.width - 20, alignSelf: "center", backgroundColor: WHITE.dark, justifyContent: 'center', shadowColor: '#000',shadowOffset: {width: 0,height: 1,},shadowOpacity: 0.3,shadowRadius: 4,elevation: 7 }}>
+                  <Text style={{ marginLeft: 10, fontSize: 15, fontFamily: 'Helvetica'  }}>
                     History
                  </Text>
                   <View style={{ position: 'absolute', right: 10, height: 20, width: 20, justifyContent: "center" }}>
-                    {this.state.openCustomerDetail ? <Icon name={"caretdown"} color={WHITE.dark} size={20} /> :
-                      <Icon name={"caretright"} color={WHITE.dark} size={20} />}
+                    {this.state.openHistory ? <Icon name={"caretdown"} color={BLACK.dark} size={20} /> :
+                      <Icon name={"caretright"} color={BLACK.dark} size={20} />}
                   </View>
                 </TouchableOpacity>
                 {this.state.openHistory &&
                   <View>
 
                     <View style={{ marginTop: 10, height: 44, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-                      <Text style={{ fontSize: 22, }}>
+                      <Text style={{ fontSize: 15, fontFamily: 'Helvetica'  }}>
                         Tyre Change
               </Text>
-                      <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+                      <Text style={{ fontSize: 12, position: 'absolute', right: 5, fontFamily: 'Helvetica'  }}>
                         04/10/19
               </Text>
                     </View>
 
                     <View style={{ marginTop: 10, height: 44, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-                      <Text style={{ fontSize: 22, }}>
+                      <Text style={{ fontSize: 15, fontFamily: 'Helvetica'  }}>
                         Battery Change
                       </Text>
-                      <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+                      <Text style={{ fontSize: 12, position: 'absolute', right: 5, fontFamily: 'Helvetica'  }}>
                         12/11/19
                       </Text>
                     </View>

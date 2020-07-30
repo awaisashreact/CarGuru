@@ -31,24 +31,29 @@ const ProfileStyles = {
     borderRadius: 40px;
   `,
   DetailWrapper: styled.View`
-    height: 50px;
-    width: ${SCREEN.width - 30}px;
-    alignSelf: center;
-    borderRadius: 15px;
-    backgroundColor: ${GREEN.deafult};
-    flexDirection: row;
-    marginTop: 10px;
+  height: 50px;
+  width: ${SCREEN.width - 20}px;
+  alignSelf: center;
+  backgroundColor: ${WHITE.dark};
+  flexDirection: row;
+  marginTop: 10px;
+  borderColor: ${BLACK.light_grey};
+  borderWidth: 0.5px;
+  alignItems: center;
+  paddingLeft: 5px;
   `,
   TitleTextView: styled.View`
-    flex: 0.3;
-    justifyContent: center;
-    borderRightWidth: 0.5px;
-    borderColor: ${WHITE.dark};
+  flex: 0.3;
+  justifyContent: center;
+  borderRightWidth: 0.5px;
+  borderColor: ${WHITE.dark};
+  paddingLeft: 5px;
   `,
   TitleText: styled.Text`
-    fontSize: 18px;
-    alignSelf: center;
-    color: ${WHITE.dark};
+  fontSize: 15px;
+  alignSelf: center;
+  color: ${BLACK.dark};
+  fontFamily: Helvetica;
   `,
   DescriptionView: styled.View`
   flex: 0.7;
@@ -56,12 +61,12 @@ const ProfileStyles = {
   paddingLeft: 10px;
 `,
 DescriptionText: styled.Text`
-  fontSize: 15px;
-  color: ${WHITE.dark};
+fontSize: 12px;
+color: ${BLACK.light};
+fontFamily: Helvetica;
 `,
 ServiceFeeDetail: styled.TextInput`
   height: 50px;
-  color: ${WHITE.dark};
 `,
 };
 

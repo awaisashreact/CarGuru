@@ -6,6 +6,7 @@ export const BLACK = {
   darkLight: 'rgba(41, 43, 47, 0.95)',
   placeholder: 'rgba(0, 0, 0, 0.15)',
   transParent: 'rgba(52, 52, 52, 0.8)',
+  light_grey: 'rgba(192,192,192, 1)'
 };
 
 export const WHITE = {

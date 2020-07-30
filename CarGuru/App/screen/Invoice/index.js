@@ -110,117 +110,117 @@ class Invoice extends Component {
               rightType={'text'}
             />
             <ScrollView bounces={false}>
-              <View style={{ height: 44, width: SCREEN.width - 10, alignSelf: 'center', backgroundColor: WHITE.silver, marginTop: 10, justifyContent: 'center' }}>
-                <Text style={{ fontWeight: '500', fontSize: 20, paddingLeft: 10 }}>
+              <View style={{ height: 44, width: SCREEN.width - 20, alignSelf: 'center', marginTop: 10, backgroundColor: WHITE.dark, justifyContent: 'center', shadowColor: '#000',shadowOffset: {width: 0,height: 1,},shadowOpacity: 0.3,shadowRadius: 4,elevation: 7 }}>
+                <Text style={{ fontFamily: 'Helvetica', fontSize: 15, paddingLeft: 10 }}>
                   Customer Detail
                  </Text>
               </View>
 
               <View style={{ marginTop: 10, height: 44, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-                <Text style={{ fontSize: 22, }}>
+                <Text style={{ fontSize: 15, fontFamily: 'Helvetica' }}>
                   Name
                      </Text>
-                <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+                <Text style={{ fontSize: 12, fontFamily: 'Helvetica', position: 'absolute', right: 5 }}>
                   John
                       </Text>
               </View>
 
               <View style={{ marginTop: 10, height: 44, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-                <Text style={{ fontSize: 22, }}>
+                <Text style={{ fontSize: 15, fontFamily: 'Helvetica' }}>
                   Email
               </Text>
-                <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+                <Text style={{ fontSize: 12,fontFamily: 'Helvetica', position: 'absolute', right: 5 }}>
                   John3gmail.com
               </Text>
               </View>
 
               <View style={{ marginTop: 10, height: 44, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-                <Text style={{ fontSize: 22, }}>
+                <Text style={{ fontSize: 15, fontFamily: 'Helvetica' }}>
                   Contact
               </Text>
-                <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+                <Text style={{ fontSize: 12,fontFamily: 'Helvetica', position: 'absolute', right: 5 }}>
                   875-753-522
               </Text>
               </View>
 
               <View style={{ marginTop: 10, height: 44, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-                <Text style={{ fontSize: 22, }}>
+                <Text style={{ fontSize: 15, fontFamily: 'Helvetica' }}>
                   Mulkia #
               </Text>
-                <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+                <Text style={{ fontSize: 12, fontFamily: 'Helvetica', position: 'absolute', right: 5 }}>
                   abc-457e3
               </Text>
               </View>
-              <View style={{ height: 44, width: SCREEN.width - 10, alignSelf: 'center', backgroundColor: WHITE.silver, marginTop: 10, justifyContent: 'center' }}>
-                <Text style={{ fontWeight: '500', fontSize: 20, paddingLeft: 10 }}>
+              <View style={{ height: 44, width: SCREEN.width - 20, alignSelf: 'center', marginTop: 10, backgroundColor: WHITE.dark, justifyContent: 'center', shadowColor: '#000',shadowOffset: {width: 0,height: 1,},shadowOpacity: 0.3,shadowRadius: 4,elevation: 7 }}>
+                <Text style={{ fontFamily: 'Helvetica', fontSize: 15, paddingLeft: 10 }}>
                   Vehicle Detail
                  </Text>
               </View>
               <View style={{ marginTop: 10, height: 44, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-              <Text style={{ fontSize: 22, }}>
+              <Text style={{ fontSize: 15, fontFamily: 'Helvetica' }}>
                         Make
                      </Text>
-                      <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+                      <Text style={{ fontSize: 12, fontFamily: 'Helvetica', position: 'absolute', right: 5 }}>
                         Toyota
                       </Text>
                     </View>
 
                     <View style={{ marginTop: 10, height: 44, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-                      <Text style={{ fontSize: 22, }}>
+                      <Text style={{ fontSize: 15, fontFamily: 'Helvetica' }}>
                         Model
                    </Text>
-                      <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+                      <Text style={{ fontSize: 12, fontFamily: 'Helvetica', position: 'absolute', right: 5 }}>
                         Corola
                       </Text>
                     </View>
                     <View style={{ marginTop: 10, height: 44, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-                      <Text style={{ fontSize: 22, }}>
+                      <Text style={{ fontSize: 15, fontFamily: 'Helvetica' }}>
                         Year
                    </Text>
-                      <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+                      <Text style={{ fontSize: 12, position: 'absolute', right: 5, fontFamily: 'Helvetica' }}>
                         2017
                       </Text>
                     </View>
 
                     <View style={{ marginTop: 10, height: 44, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-                      <Text style={{ fontSize: 22, }}>
+                      <Text style={{ fontSize: 15, fontFamily: 'Helvetica' }}>
                         Vehicle No.
                      </Text>
-                      <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+                      <Text style={{ fontSize: 12, fontFamily: 'Helvetica', position: 'absolute', right: 5 }}>
                         6783
                       </Text>
                     </View>
               
 
-              <View style={{ height: 44, width: SCREEN.width - 10, alignSelf: 'center', backgroundColor: WHITE.silver, marginTop: 10, justifyContent: 'center' }}>
-                <Text style={{ fontWeight: '500', fontSize: 20, paddingLeft: 10 }}>
+              <View style={{ height: 44, width: SCREEN.width - 20, alignSelf: 'center', marginTop: 10, backgroundColor: WHITE.dark, justifyContent: 'center', shadowColor: '#000',shadowOffset: {width: 0,height: 1,},shadowOpacity: 0.3,shadowRadius: 4,elevation: 7 }}>
+                <Text style={{ fontFamily: 'Helvetica', fontSize: 15, paddingLeft: 10 }}>
                   Service Detail
                  </Text>
               </View>
 
               <View style={{ marginTop: 10, height: 44, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-                <Text style={{ fontSize: 22, }}>
+                <Text style={{ fontSize: 15, fontFamily: 'Helvetica' }}>
                   Tyre Change
                      </Text>
-                <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+                <Text style={{ fontSize: 12, fontFamily: 'Helvetica', position: 'absolute', right: 5 }}>
                   150 AED
                       </Text>
               </View>
 
               <View style={{ marginTop: 10, height: 44, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-                <Text style={{ fontSize: 22, }}>
+                <Text style={{ fontSize: 15, fontFamily: 'Helvetica' }}>
                   Battery Change
               </Text>
-                <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+                <Text style={{ fontSize: 12, fontFamily: 'Helvetica', position: 'absolute', right: 5 }}>
                   200 AED
               </Text>
               </View>
 
               <View style={{ marginTop: 15, height: 44, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-                <Text style={{ fontSize: 25, fontStyle: 'italic'}}>
+                <Text style={{ fontSize: 16, fontFamily: 'Helvetica', fontStyle: 'italic'}}>
                   Total Price
               </Text>
-                <Text style={{ fontSize: 25, position: 'absolute', right: 5, fontWeight: 'bold' }}>
+                <Text style={{ fontSize: 13, fontFamily: 'Helvetica', position: 'absolute', right: 5, fontWeight: 'bold' }}>
                   350 AED
               </Text>
               </View>

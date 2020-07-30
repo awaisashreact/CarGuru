@@ -18,16 +18,15 @@ const ServiceOrderStyles = {
   `,
   CellWrapper: styled.TouchableOpacity`
     minHeight: ${SCREEN.height / 8}px;
-    width: ${SCREEN.width - 15}px;
+    width: ${SCREEN.width - 30}px;
     alignSelf: center;
-    borderRadius: 10px;
-    backgroundColor: ${WHITE.off};
+    backgroundColor: ${WHITE.dark};
     shadowColor: #000;
      shadowOffset: {
 	     width: 0,
 	     height: 1,
      };
-    shadowOpacity: 0.29px;
+    shadowOpacity: 0.3px;
     shadowRadius: 4px;
     elevation: 7;
     marginTop: 20px;
@@ -41,19 +40,19 @@ const ServiceOrderStyles = {
   CellLeftInnerImage: styled.Image`
     height: 100px;
     width: 100px;
-    borderRadius: 10px;
   `,
   CellRightView: styled.View`
     flex: 0.7;
     justifyContent: center;
   `,
   CellRightTitle: styled.Text`
-    fontSize: 20px;
-    fontWeight: bold;
+    fontSize: 15px;
+    fontFamily: Helvetica;
   `,
   CellRightdetail: styled.Text`
-    fontSize: 16px;
+    fontSize: 12px;
     color ${BLACK.darkLight};
+    fontFamily: Helvetica;
   `,
   ButtonWrapperView: styled.View`
     height: 44px;
@@ -75,9 +74,10 @@ const ServiceOrderStyles = {
     alignItems: center;
   `,
   InnerButtonText: styled.Text`
-  fontSize: 18px;
+  fontSize: 15px;
   fontWeight: 500;
   color: ${WHITE.dark};
+  fontFamily: Helvetica;
   `,
 };
 

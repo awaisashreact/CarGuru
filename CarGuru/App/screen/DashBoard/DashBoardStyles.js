@@ -28,18 +28,20 @@ const DashBoardStyles = {
     height: 120px;
     width: ${(SCREEN.width / 2) - 50}px;
     borderWidth: 0.3px;
-    borderRadius: 5px;
+    borderColor: ${BLACK.placeholder};
     justifyContent: center;
+    backgroundColor: ${WHITE.dark};
   `,
   TopInnerHeaderText: styled.Text`
-    fontSize: 22px;
-    fontWeight: bold;
+    fontSize: 15px;
     alignSelf: center;
+    fontFamily: Helvetica;
   `,
   TopInnerCountText: styled.Text`
-    fontSize: 18px;
+    fontSize: 12px;
     alignSelf: center;
     marginTop: 5px;
+    fontFamily: Helvetica;
   `,
 };
 

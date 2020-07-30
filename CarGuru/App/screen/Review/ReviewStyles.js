@@ -20,18 +20,19 @@ const ReviewStyles = {
     height: ${SCREEN.height / 9}px;
     width: ${SCREEN.width - 15}px;
     alignSelf: center;
-    borderRadius: 10px;
     backgroundColor: ${WHITE.dark};
-    shadowColor: #000;
+    shadowColor: ${BLACK.dark};
      shadowOffset: {
 	     width: 0,
 	     height: 1,
      };
-    shadowOpacity: 0.29px;
+    shadowOpacity: 0.1px;
     shadowRadius: 4px;
     elevation: 7;
     marginTop: 20px;
     flexDirection: row;
+    borderColor: ${BLACK.light_grey};
+    borderWidth: 0.3px;
   `,
   CellLeftView: styled.View`
     flex: 0.25;
@@ -49,16 +50,16 @@ const ReviewStyles = {
     padding: 10px
   `,
   CellRightTitle: styled.Text`
-    fontSize: 20px;
-    fontWeight: bold;
+    fontSize: 15px;
+    fontFamily: Helvetica;
   `,
   CellRightWrapper: styled.View`
    flexDirection: row;
    alignItems: center;
   `,
   CellRightdetail: styled.Text`
-    fontSize: 16px;
-    color ${BLACK.darkLight};
+    fontSize: 12px;
+    fontFamily: Helvetica;
   `,
 
 };

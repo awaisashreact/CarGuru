@@ -25,16 +25,16 @@ class DashBoard extends Component {
              onPress={() => this.props.navigation.navigate("EarnJobDetail", {from: 'Earn'})}
               style={{
               shadowColor: BLACK.dark,
-              shadowOffset: { width: 0, height: 0 },
-              shadowOpacity: 0.08,
+              shadowOffset: { width: 1, height: 1 },
+              shadowOpacity: 0.2,
               shadowRadius: 1,
               elevation: 4,
-              backgroundColor: GREEN.deafult
+              backgroundColor: WHITE.dark
             }}>
-              <DashBoardStyles.TopInnerHeaderText style={{color: WHITE.dark}}>
+              <DashBoardStyles.TopInnerHeaderText>
                 Total earning
               </DashBoardStyles.TopInnerHeaderText>
-              <DashBoardStyles.TopInnerCountText style={{color: WHITE.dark}}>
+              <DashBoardStyles.TopInnerCountText >
                 2200 AED
               </DashBoardStyles.TopInnerCountText>
             </DashBoardStyles.TopInnerView>
@@ -44,16 +44,16 @@ class DashBoard extends Component {
               onPress={() => this.props.navigation.navigate("EarnJobDetail", {from: 'Earn'})}
               style={{
               shadowColor: BLACK.dark,
-              shadowOffset: { width: 0, height: 0 },
-              shadowOpacity: 0.08,
+              shadowOffset: { width: 1, height: 1 },
+              shadowOpacity: 0.2,
               shadowRadius: 1,
               elevation: 4,
-              backgroundColor: GREEN.deafult
+              backgroundColor: WHITE.dark
             }}>
-              <DashBoardStyles.TopInnerHeaderText style={{color: WHITE.dark}} onPress={() => this.props.navigation.navigate("EarnJobDetail", {from: 'Jobs'})}>
+              <DashBoardStyles.TopInnerHeaderText  onPress={() => this.props.navigation.navigate("EarnJobDetail", {from: 'Jobs'})}>
                 Total jobs
               </DashBoardStyles.TopInnerHeaderText>
-              <DashBoardStyles.TopInnerCountText style={{color: WHITE.dark}}>
+              <DashBoardStyles.TopInnerCountText>
                 15
               </DashBoardStyles.TopInnerCountText>
             </DashBoardStyles.TopInnerView>

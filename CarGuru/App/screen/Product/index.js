@@ -71,7 +71,7 @@ class JobDetail extends Component {
             {this.state.selectedCatogry}
           </ProductStyles.CellRightTitle>
           <ProductStyles.AbsoluteRightIcon>
-            <Icon name={"caretdown"} color={GREEN.deafult} size={20} />
+            <Icon name={"caretdown"} color={BLACK.dark} size={20} />
           </ProductStyles.AbsoluteRightIcon>
         </ProductStyles.TopDropDownView>
         <ProductStyles.JobList
@@ -123,35 +123,35 @@ class JobDetail extends Component {
               {this.state.selectedObj.detail}
             </ProductStyles.CellRightTitle>
 
-            <View style={{ marginTop: 10, height: 40, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-              <Text style={{ fontSize: 22, fontWeight: 'bold' }}>
+            <View style={{ marginTop: 10, height: 40, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center', backgroundColor: WHITE.dark }}>
+              <Text style={{ fontSize: 15, fontFamily: 'Helvetica' }}>
                 Current Price
               </Text>
-              <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+              <Text style={{ fontSize: 12, fontFamily: 'Helvetica', position: 'absolute', right: 5 }}>
                 200 AED
               </Text>
             </View>
             <View style={{ marginTop: 5, height: 40, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-              <Text style={{ fontSize: 22, fontWeight: 'bold' }}>
+              <Text style={{ fontSize: 15, fontFamily: 'Helvetica' }}>
                 Least Price
               </Text>
-              <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+              <Text style={{ fontSize: 12, fontFamily: 'Helvetica', position: 'absolute', right: 5 }}>
                 180 AED
               </Text>
             </View>
             <View style={{ marginTop: 5, height: 40, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-              <Text style={{ fontSize: 22, fontWeight: 'bold' }}>
+              <Text style={{ fontSize: 15, fontFamily: 'Helvetica' }}>
                 Margin
               </Text>
-              <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+              <Text style={{ fontSize: 12, fontFamily: 'Helvetica', position: 'absolute', right: 5 }}>
                 10%
               </Text>
             </View>
             <View style={{ marginTop: 5, height: 40, width: SCREEN.width - 30, alignSelf: "center", justifyContent: 'center' }}>
-              <Text style={{ fontSize: 22, fontWeight: 'bold' }}>
+              <Text style={{ fontSize: 15, fontFamily: 'Helvetica' }}>
                 Vendor
               </Text>
-              <Text style={{ fontSize: 22, position: 'absolute', right: 5 }}>
+              <Text style={{ fontSize: 12, fontFamily: 'Helvetica', position: 'absolute', right: 5 }}>
                 Boch GmbH
               </Text>
             </View>
@@ -165,7 +165,7 @@ class JobDetail extends Component {
               </ProductStyles.TopDropDownView>
 
               <ProductStyles.InnerButton style={{alignSelf: 'center', marginTop: 10}}>
-                    <ProductStyles.InnerButtonText style={{fontSize: 16}}>
+                    <ProductStyles.InnerButtonText style={{fontSize: 15}}>
                       Add to Service Order
                   </ProductStyles.InnerButtonText>
                   </ProductStyles.InnerButton>

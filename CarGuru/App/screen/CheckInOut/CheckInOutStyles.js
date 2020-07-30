@@ -8,7 +8,10 @@ const CheckInOutStyles = {
     backgroundColor: ${WHITE.dark};
   `,
   CheckInTime: styled.Text`
-    fontSize: 18px;
+    fontSize: 16px;
+    alignSelf: center;
+    color: ${BLACK.dark};
+    fontFamily: Helvetica;
     marginLeft: 5px;
   `,
   CheckInOutButton: styled.TouchableOpacity`
@@ -16,15 +19,21 @@ const CheckInOutStyles = {
     width: ${SCREEN.width - 80}px;
     alignSelf: center;
     marginTop: 5px;
-    backgroundColor: ${GREEN.deafult};
-    borderRadius: 10px;
+    backgroundColor: ${WHITE.dark};
     justifyContent: center;
     alignItems: center;
+    shadowOffset: { width: 0.9, height: 0.1 };
+    shadowColor: ${BLACK.dark};
+    shadowOpacity: 0.12;
+    elevation: 1;
+    borderColor: ${BLACK.light_grey};
+    borderWidth: 0.3px;
   `,
   CheckInButtonText: styled.Text`
-    color: ${WHITE.dark};
-    fontSize: 20px;
-    fontWeight: 500;
+  color: ${BLACK.dark};
+  fontFamily: Helvetica;
+  fontSize: 15px;
+  fontWeight: 500;
   `,
 
 };

@@ -6,7 +6,7 @@ import {SCREEN} from '../../helper/Constant';
 const SignInStyles = {
   WrapperViewVertical: styled.View`
     flex: 1;
-    backgroundColor: ${BLACK.darkLight};
+    backgroundColor: ${WHITE.dark};
   `,
   WrapperViewVertical2: styled.View`
     flex: 1;
@@ -23,14 +23,21 @@ const SignInStyles = {
     width: ${SCREEN.width - 30}px;
     alignSelf: center;
     marginTop: 20px;
-    backgroundColor: ${BLACK.light};
-    borderRadius: 10px;
+    backgroundColor: ${WHITE.dark};
     flexDirection: row;
+    shadowColor: #000;
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    };
+   shadowOpacity: 0.19px;
+   shadowRadius: 8px;
+   elevation: 7;
   `,
   TextInputImageWrapper: styled.View`
     height: 54px;
     width: 54px;
-    backgroundColor: ${GREEN.deafult};
+    backgroundColor: ${WHITE.dark};
     justifyContent: center;
     alignItems: center;
     borderBottomLeftRadius: 10px;
@@ -44,7 +51,7 @@ const SignInStyles = {
   TextInputInner: styled.TextInput`
     height: 54px;
     width: ${SCREEN.width - 84}px;
-    backgroundColor: ${BLACK.light};
+    backgroundColor: ${WHITE.dark};
     borderBottomRightRadius: 10px;
     borderTopRightRadius: 10px;
     padding: 7px;
@@ -73,8 +80,8 @@ const SignInStyles = {
     marginLeft: 5px;
   `,
   RememberMetext: styled.Text`
-    fontSize: 17px;
-    color: ${WHITE.dark};
+    fontSize: 12px;
+    color: ${BLACK.dark};
   `,
   LoginButtonWrapper: styled.View`
     flex: 0.35;
@@ -107,7 +114,7 @@ const SignInStyles = {
     alignSelf: center;
     justifyContent: center;
     alignItems: center;
-    backgroundColor: ${GREEN.light};
+    backgroundColor: ${BLACK.placeholder};
     marginBottom: 15px;
     borderRadius: 10px;
   `,

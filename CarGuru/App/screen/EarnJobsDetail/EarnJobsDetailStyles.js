@@ -19,16 +19,15 @@ const EarnJobsDetailStyles = {
   CellWrapper: styled.View`
     minHeight: ${SCREEN.height / 9}px;
     padding: 10px;
-    width: ${SCREEN.width - 15}px;
+    width: ${SCREEN.width - 20}px;
     alignSelf: center;
-    borderRadius: 10px;
-    backgroundColor: ${WHITE.off};
+    backgroundColor: ${WHITE.dark};
     shadowColor: #000;
      shadowOffset: {
-	     width: 0,
+	     width: 1,
 	     height: 1,
      };
-    shadowOpacity: 0.29px;
+    shadowOpacity: 0.2px;
     shadowRadius: 4px;
     elevation: 7;
     marginTop: 20px;
@@ -50,12 +49,13 @@ const EarnJobsDetailStyles = {
     justifyContent: center;
   `,
   CellRightTitle: styled.Text`
-    fontSize: 20px;
-    fontWeight: bold;
+    fontSize: 15px;
+    fontFamily: Helvetica;
   `,
   CellRightdetail: styled.Text`
-    fontSize: 16px;
+    fontSize: 12px;
     color ${BLACK.darkLight};
+    fontFamily: Helvetica;
   `,
 };
 

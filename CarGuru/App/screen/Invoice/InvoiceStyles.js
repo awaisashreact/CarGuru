@@ -18,17 +18,16 @@ const InvoiceStyles = {
   `,
   CellWrapper: styled.TouchableOpacity`
     minHeight: ${SCREEN.height / 10}px;
-    width: ${SCREEN.width - 15}px;
+    width: ${SCREEN.width - 30}px;
     alignSelf: center;
-    borderRadius: 10px;
-    backgroundColor: ${WHITE.off};
+    backgroundColor: ${WHITE.dark};
     shadowColor: #000;
      shadowOffset: {
 	     width: 0,
-	     height: 1,
+	     height: 0.3,
      };
-    shadowOpacity: 0.29px;
-    shadowRadius: 4px;
+    shadowOpacity: 0.3px;
+    shadowRadius: 6px;
     elevation: 7;
     marginTop: 20px;
     flexDirection: row;
@@ -50,11 +49,12 @@ const InvoiceStyles = {
     justifyContent: center;
   `,
   CellRightTitle: styled.Text`
-    fontSize: 16px;
-    fontWeight: bold;
+    fontSize: 15px;
+    fontFamily: Helvetica;
   `,
   CellRightdetail: styled.Text`
-    fontSize: 16px;
+    fontSize: 12px;
+    fontFamily: Helvetica;
     color ${BLACK.darkLight};
   `,
 

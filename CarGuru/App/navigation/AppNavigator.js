@@ -1,5 +1,5 @@
 import React from 'react';
-import { Animated, Easing, SafeAreaView, ScrollView, View, Image } from 'react-native';
+import { Animated, Easing, SafeAreaView, ScrollView, View, Image, TouchableOpacity, Text } from 'react-native';
 import { createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createDrawerNavigator, DrawerItems} from 'react-navigation-drawer';
@@ -37,7 +37,7 @@ const noTransitionConfig = () => ({
 });
 
 const CustomDrawerComponent = (props) => (
-  <SafeAreaView style={{backgroundColor: BLACK.dark, height: SCREEN.height}}>
+  <SafeAreaView style={{backgroundColor: WHITE.dark, height: SCREEN.height}}>
     <View style={{height: SCREEN.height / 4, justifyContent: 'center', alignItems: 'center'}}>
       <Image source={require('../assets/appIcon.png')} style={{height: SCREEN.height / 6, width: SCREEN.width / 3, resizeMode: 'contain' }}/>
     </View>
@@ -46,15 +46,27 @@ const CustomDrawerComponent = (props) => (
         {...props}
         itemStyle={{
           borderBottomWidth: 0.2,
-          borderBottomColor: BLACK.light,
+          borderBottomColor: BLACK.dark,
         }}
         labelStyle={{
           fontWeight: '400',
-          fontSize: 15,
-          color: WHITE.dark,
+          fontSize: 13,
+          color: BLACK.dark,
+          fontFamily: 'Helvetica'
         }}
       />
     </ScrollView>
+    <TouchableOpacity
+      onPress={() => props.navigation.navigate("SignIn")}
+      style={{height: 40, alignItems: 'center', flexDirection: 'row', paddingLeft: SCREEN.width / 20 }}>
+      <Icon2 name={"logout"} color={'red'} size={20}  />
+      <Text style={{
+          fontWeight: '400',
+          fontSize: 13,
+          color: 'red', marginLeft: SCREEN.width / 12}}>
+            Logout
+      </Text>
+    </TouchableOpacity>
   </SafeAreaView>
 )
 
@@ -64,7 +76,7 @@ const AppDrawerNavigator = createDrawerNavigator({
     navigationOptions: {
       drawerLabel: 'DashBoard',
       drawerIcon: ({focused}) => (
-        <Icon2 size={20} color={focused ? GREEN.deafult : WHITE.dark} name={'areachart'}/>
+        <Icon2 size={20} color={focused ? GREEN.deafult : BLACK.dark} name={'areachart'}/>
       ),
     },
   },
@@ -73,7 +85,7 @@ const AppDrawerNavigator = createDrawerNavigator({
     navigationOptions: {
       drawerLabel: 'Service Order',
       drawerIcon: ({focused}) => (
-        <Icon2 size={20} color={focused ?  GREEN.deafult : WHITE.dark} name={'customerservice'}/>
+        <Icon2 size={20} color={focused ?  GREEN.deafult : BLACK.dark} name={'customerservice'}/>
       ),
     },
   },
@@ -82,7 +94,7 @@ const AppDrawerNavigator = createDrawerNavigator({
     navigationOptions: {
       drawerLabel: 'Messages',
       drawerIcon: ({focused}) => (
-        <Icon5 size={20} color={focused ? GREEN.deafult : WHITE.dark} name={'feedback'}/>
+        <Icon5 size={20} color={focused ? GREEN.deafult : BLACK.dark} name={'feedback'}/>
       ),
     },
   },
@@ -91,7 +103,7 @@ const AppDrawerNavigator = createDrawerNavigator({
     navigationOptions: {
       drawerLabel: 'Invoice',
       drawerIcon: ({focused}) => (
-        <Icon4 size={20} color={focused ? GREEN.deafult : WHITE.dark} name={'file-invoice'}/>
+        <Icon4 size={20} color={focused ? GREEN.deafult : BLACK.dark} name={'file-invoice'}/>
       ),
     },
   },
@@ -101,7 +113,7 @@ const AppDrawerNavigator = createDrawerNavigator({
     navigationOptions: {
       drawerLabel: 'Product',
       drawerIcon: ({focused}) => (
-        <Icon4 size={20} color={focused ? GREEN.deafult : WHITE.dark} name={'file-invoice'}/>
+        <Icon4 size={20} color={focused ? GREEN.deafult : BLACK.dark} name={'file-invoice'}/>
       ),
     },
   },
@@ -110,7 +122,7 @@ const AppDrawerNavigator = createDrawerNavigator({
     navigationOptions: {
       drawerLabel: 'OCR',
       drawerIcon: ({focused}) => (
-        <Icon3 size={20} color={focused ? GREEN.deafult : WHITE.dark} name={'barcode-scan'}/>
+        <Icon3 size={20} color={focused ? GREEN.deafult : BLACK.dark} name={'barcode-scan'}/>
       ),
     },
   },
@@ -119,7 +131,7 @@ const AppDrawerNavigator = createDrawerNavigator({
     navigationOptions: {
       drawerLabel: 'Profile',
       drawerIcon: ({focused}) => (
-        <Icon3 size={20} color={focused ? GREEN.deafult : WHITE.dark} name={'account'}/>
+        <Icon3 size={20} color={focused ? GREEN.deafult : BLACK.dark} name={'account'}/>
       ),
     },
   },
@@ -128,7 +140,7 @@ const AppDrawerNavigator = createDrawerNavigator({
     navigationOptions: {
       drawerLabel: 'CheckIn/CheckOut',
       drawerIcon: ({focused}) => (
-        <Icon3 size={20} color={focused ? GREEN.deafult : WHITE.dark} name={'account-clock'}/>
+        <Icon3 size={20} color={focused ? GREEN.deafult : BLACK.dark} name={'account-clock'}/>
       ),
     },
   },
@@ -137,7 +149,7 @@ const AppDrawerNavigator = createDrawerNavigator({
     navigationOptions: {
       drawerLabel: 'Feedback',
       drawerIcon: ({focused}) => (
-        <Icon5 size={20} color={focused ? GREEN.deafult : WHITE.dark} name={'feedback'}/>
+        <Icon5 size={20} color={focused ? GREEN.deafult : BLACK.dark} name={'feedback'}/>
       ),
     },
   },
@@ -148,8 +160,10 @@ const AppDrawerNavigator = createDrawerNavigator({
     activeColor: GREEN.deafult,
     labeled: true,
     shifting: false,
-    inactiveColor: WHITE.dark,
-    barStyle: {backgroundColor: '#fff'},
+    inactiveColor: BLACK.dark,
+    activeTintColor: BLACK.dark,
+    inactiveTintColor: WHITE.dark,
+    barStyle: {backgroundColor: BLACK.dark},
 })
 
 // login stack
